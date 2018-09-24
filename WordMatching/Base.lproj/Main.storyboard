@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GOo-i7-GQP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WordMatching" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="PJv-kY-7Rv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Match" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLw-2w-9ku">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Game!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pV-Uv-8T1">
+                                        <rect key="frame" x="0.0" y="201" width="375" height="100.5"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="23"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dDr-aJ-luF">
+                                        <rect key="frame" x="0.0" y="301.5" width="375" height="301.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Siq-Dq-atF" userLabel="Pic Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOH-aU-b5h">
+                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="151"/>
+                                                        <state key="normal" title="Vehicles" image="vehicles"/>
+                                                        <connections>
+                                                            <segue destination="nkV-AW-ZX0" kind="show" identifier="vehicle" id="hFs-vz-cxg"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPN-tM-Gt6">
+                                                        <rect key="frame" x="125" y="0.0" width="125" height="151"/>
+                                                        <state key="normal" title="Animals" image="animals">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="Zrk-IW-pai" kind="show" identifier="animal" id="J3n-rR-cBn"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiQ-aw-0Nq">
+                                                        <rect key="frame" x="250" y="0.0" width="125" height="151"/>
+                                                        <state key="normal" title="Fruits" image="fruits">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="EVR-V3-zZX" kind="show" identifier="fruit" id="gY1-pB-rkz"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="tQU-38-g7w" userLabel="Score Stack View">
+                                                <rect key="frame" x="0.0" y="151" width="375" height="150.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKs-ui-Abv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="16.5"/>
+                                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEy-XN-iWD">
+                                                        <rect key="frame" x="125" y="0.0" width="125" height="16.5"/>
+                                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYw-2f-BB3">
+                                                        <rect key="frame" x="250" y="0.0" width="125" height="16.5"/>
+                                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dDr-aJ-luF" firstAttribute="height" secondItem="PJv-kY-7Rv" secondAttribute="height" multiplier="0.5" id="bOp-SR-YVB"/>
+                                    <constraint firstItem="DLw-2w-9ku" firstAttribute="height" secondItem="8pV-Uv-8T1" secondAttribute="height" multiplier="2" id="eA2-hL-3vQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PJv-kY-7Rv" secondAttribute="trailing" id="1DF-SP-tXn"/>
+                            <constraint firstItem="PJv-kY-7Rv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3wr-gH-NPx"/>
+                            <constraint firstItem="PJv-kY-7Rv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EAP-zG-My0"/>
+                            <constraint firstItem="PJv-kY-7Rv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mq0-Yw-eus"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gkc-yU-eTB"/>
+                    <connections>
+                        <outlet property="animalsScoreLabel" destination="jEy-XN-iWD" id="WHA-Ob-Qiy"/>
+                        <outlet property="fruitsScoreLabel" destination="sYw-2f-BB3" id="CZX-P0-WUF"/>
+                        <outlet property="vehiclesScoreLabel" destination="pKs-ui-Abv" id="4cD-9I-ZIb"/>
+                        <outletCollection property="mainMenuButtons" destination="OiQ-aw-0Nq" collectionClass="NSMutableArray" id="7EQ-Kg-9hP"/>
+                        <outletCollection property="mainMenuButtons" destination="zPN-tM-Gt6" collectionClass="NSMutableArray" id="pYa-z4-wwM"/>
+                        <outletCollection property="mainMenuButtons" destination="hOH-aU-b5h" collectionClass="NSMutableArray" id="OaX-k8-czJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865" y="-83"/>
+        </scene>
+        <!--Match the Fruits-->
+        <scene sceneID="2z4-HO-Wsq">
+            <objects>
+                <viewController id="EVR-V3-zZX" customClass="GamePageViewController" customModule="WordMatching" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8vI-do-UhL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="tiX-aa-Woi">
+                                <rect key="frame" x="10" y="64" width="355" height="553"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXd-Dg-Ids">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="55.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCI-2w-0Vw">
+                                                <rect key="frame" x="0.0" y="0.0" width="177.5" height="55.5"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQB-93-2Rc">
+                                                <rect key="frame" x="177.5" y="0.0" width="177.5" height="55.5"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="dQB-93-2Rc" firstAttribute="width" secondItem="OCI-2w-0Vw" secondAttribute="width" id="gDa-8e-X9f"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yQ-pV-Y6z">
+                                        <rect key="frame" x="0.0" y="55.5" width="355" height="199"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="32"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dv9-M2-UwA" userLabel="whole fruits Stack View">
+                                        <rect key="frame" x="0.0" y="254.5" width="355" height="298.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XHJ-tf-E3N" userLabel="firstFruits Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="144.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2l-aR-Ph0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="81.5" height="144.5"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="apple" image="apples">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="EVR-V3-zZX" eventType="touchUpInside" id="jaT-VY-Zjs"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9A-zI-LMr">
+                                                        <rect key="frame" x="91.5" y="0.0" width="81" height="144.5"/>
+                                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="watermelon" image="watermelons">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="EVR-V3-zZX" eventType="touchUpInside" id="Cf6-T2-I1w"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJt-kY-QT6">
+                                                        <rect key="frame" x="182.5" y="0.0" width="81.5" height="144.5"/>
+                                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="strawberry" image="strawberries">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="EVR-V3-zZX" eventType="touchUpInside" id="5vb-2h-Uju"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19J-KM-NdJ">
+                                                        <rect key="frame" x="274" y="0.0" width="81" height="144.5"/>
+                                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="orange" image="oranges">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="EVR-V3-zZX" eventType="touchUpInside" id="Bll-8N-3Er"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Ed-o8-yee" userLabel="secondFruits Stack View">
+                                                <rect key="frame" x="0.0" y="154.5" width="355" height="144"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="503-2I-cOi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="81.5" height="144"/>
+                                                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="pineapple" image="pineapples">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="EVR-V3-zZX" eventType="touchUpInside" id="j1j-gc-Lrt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hap-n0-YAG">
+                                                        <rect key="frame" x="91.5" y="0.0" width="81" height="144"/>
+                                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="banana" image="bananas">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="EVR-V3-zZX" eventType="touchUpInside" id="0dm-fc-v95"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfU-nD-Ghx">
+                                                        <rect key="frame" x="182.5" y="0.0" width="81.5" height="144"/>
+                                                        <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="grapes" image="grapes">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="EVR-V3-zZX" eventType="touchUpInside" id="h1n-KW-0UM"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohE-pQ-20v">
+                                                        <rect key="frame" x="274" y="0.0" width="81" height="144"/>
+                                                        <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="mango" image="mangoes">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="EVR-V3-zZX" eventType="touchUpInside" id="ire-wk-US7"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dv9-M2-UwA" firstAttribute="height" secondItem="9yQ-pV-Y6z" secondAttribute="height" multiplier="1.5" id="Cj9-cV-GXh"/>
+                                    <constraint firstItem="ZXd-Dg-Ids" firstAttribute="height" secondItem="tiX-aa-Woi" secondAttribute="height" multiplier="0.1" id="yhh-iC-l4W"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vT6-Su-ftH" firstAttribute="trailing" secondItem="tiX-aa-Woi" secondAttribute="trailing" constant="10" id="Cfq-3z-KFn"/>
+                            <constraint firstItem="tiX-aa-Woi" firstAttribute="leading" secondItem="vT6-Su-ftH" secondAttribute="leading" constant="10" id="H3v-oH-UCz"/>
+                            <constraint firstItem="vT6-Su-ftH" firstAttribute="bottom" secondItem="tiX-aa-Woi" secondAttribute="bottom" constant="50" id="OYF-IY-Jhi"/>
+                            <constraint firstItem="tiX-aa-Woi" firstAttribute="top" secondItem="vT6-Su-ftH" secondAttribute="top" id="Unq-h8-Sl2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vT6-Su-ftH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Match the Fruits" id="QGO-d5-4Xa">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="a3Z-YZ-dSK">
+                            <connections>
+                                <action selector="cancelTapped" destination="EVR-V3-zZX" id="wfy-4p-j96"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Info" id="UYm-jX-o4e">
+                            <connections>
+                                <action selector="infoTapped:" destination="EVR-V3-zZX" id="c4j-MG-oQY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="highScoreLabel" destination="OCI-2w-0Vw" id="pDC-Os-uQg"/>
+                        <outlet property="scoreLabel" destination="dQB-93-2Rc" id="73I-Mz-shm"/>
+                        <outlet property="wordToGuessLabel" destination="9yQ-pV-Y6z" id="Iuu-kh-lzN"/>
+                        <outletCollection property="yourGuessButtons" destination="R2l-aR-Ph0" collectionClass="NSMutableArray" id="eg6-U3-3vu"/>
+                        <outletCollection property="yourGuessButtons" destination="M9A-zI-LMr" collectionClass="NSMutableArray" id="ipQ-4R-lmR"/>
+                        <outletCollection property="yourGuessButtons" destination="iJt-kY-QT6" collectionClass="NSMutableArray" id="6hl-A0-n0q"/>
+                        <outletCollection property="yourGuessButtons" destination="503-2I-cOi" collectionClass="NSMutableArray" id="qyk-Sc-USN"/>
+                        <outletCollection property="yourGuessButtons" destination="hap-n0-YAG" collectionClass="NSMutableArray" id="cZs-cI-mKH"/>
+                        <outletCollection property="yourGuessButtons" destination="VfU-nD-Ghx" collectionClass="NSMutableArray" id="Q05-4e-hos"/>
+                        <outletCollection property="yourGuessButtons" destination="19J-KM-NdJ" collectionClass="NSMutableArray" id="Rcy-jx-m6U"/>
+                        <outletCollection property="yourGuessButtons" destination="ohE-pQ-20v" collectionClass="NSMutableArray" id="GNw-Qc-lch"/>
+                        <segue destination="9qE-tX-ipi" kind="unwind" identifier="fruit" unwindAction="unwindToMenuWithSender:" id="lAX-SV-tRn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kjp-r0-sB6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="9qE-tX-ipi" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="752"/>
+        </scene>
+        <!--Match the Animals-->
+        <scene sceneID="DMk-YU-xoF">
+            <objects>
+                <viewController id="Zrk-IW-pai" customClass="GamePageViewController" customModule="WordMatching" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DPP-MS-BEP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="xGa-SN-Nd3">
+                                <rect key="frame" x="10" y="64" width="355" height="553"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMa-0P-F1d">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="55.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OC-Nu-mBt">
+                                                <rect key="frame" x="0.0" y="0.0" width="177.5" height="55.5"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PnV-Ms-Lne">
+                                                <rect key="frame" x="177.5" y="0.0" width="177.5" height="55.5"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="PnV-Ms-Lne" firstAttribute="width" secondItem="4OC-Nu-mBt" secondAttribute="width" id="kh2-Z5-3A6"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phe-g0-ye1">
+                                        <rect key="frame" x="0.0" y="55.5" width="355" height="199"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="32"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K58-62-0dM">
+                                        <rect key="frame" x="0.0" y="254.5" width="355" height="298.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hON-cX-j1y">
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="144.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvo-lJ-oPO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="81.5" height="144.5"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="lion" image="lion">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="Zrk-IW-pai" eventType="touchUpInside" id="Xae-pf-Ud2"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAX-gD-dVm">
+                                                        <rect key="frame" x="91.5" y="0.0" width="81" height="144.5"/>
+                                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="tiger" image="tiger">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="Zrk-IW-pai" eventType="touchUpInside" id="rWS-sQ-4kK"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UkS-by-oLU">
+                                                        <rect key="frame" x="182.5" y="0.0" width="81.5" height="144.5"/>
+                                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="elephant" image="elephant">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="Zrk-IW-pai" eventType="touchUpInside" id="EFr-Ve-HoV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4B-Gc-z6f">
+                                                        <rect key="frame" x="274" y="0.0" width="81" height="144.5"/>
+                                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="koala" image="koala">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="Zrk-IW-pai" eventType="touchUpInside" id="ifj-DI-nng"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="h1c-2i-Y5E">
+                                                <rect key="frame" x="0.0" y="154.5" width="355" height="144"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbp-QR-Swg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="82" height="144"/>
+                                                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="kangaroo" image="kangaroo">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="Zrk-IW-pai" eventType="touchUpInside" id="75O-nn-9js"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Py4-37-L9F">
+                                                        <rect key="frame" x="91" y="0.0" width="82" height="144"/>
+                                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="penguin" image="penguin">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="Zrk-IW-pai" eventType="touchUpInside" id="aKU-dy-Sbg"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKW-uz-Tb7">
+                                                        <rect key="frame" x="182" y="0.0" width="82" height="144"/>
+                                                        <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="sheep" image="sheep">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="Zrk-IW-pai" eventType="touchUpInside" id="nD9-w6-qie"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvK-wg-NXl">
+                                                        <rect key="frame" x="273" y="0.0" width="82" height="144"/>
+                                                        <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="giraffe" image="giraffe">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="Zrk-IW-pai" eventType="touchUpInside" id="3FE-fe-igx"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="K58-62-0dM" firstAttribute="height" secondItem="Phe-g0-ye1" secondAttribute="height" multiplier="1.5" id="MnA-cj-irS"/>
+                                    <constraint firstItem="LMa-0P-F1d" firstAttribute="height" secondItem="xGa-SN-Nd3" secondAttribute="height" multiplier="0.1" id="pBa-dz-wUF"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="isf-qz-LQR" firstAttribute="trailing" secondItem="xGa-SN-Nd3" secondAttribute="trailing" constant="10" id="5mM-N7-K6a"/>
+                            <constraint firstItem="xGa-SN-Nd3" firstAttribute="top" secondItem="isf-qz-LQR" secondAttribute="top" id="P7H-K5-h5p"/>
+                            <constraint firstItem="xGa-SN-Nd3" firstAttribute="leading" secondItem="isf-qz-LQR" secondAttribute="leading" constant="10" id="S5r-ws-sx9"/>
+                            <constraint firstItem="isf-qz-LQR" firstAttribute="bottom" secondItem="xGa-SN-Nd3" secondAttribute="bottom" constant="50" id="ZQz-1o-TKy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="isf-qz-LQR"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Match the Animals" id="FCn-G6-kL0">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="VBP-UI-Ijp">
+                            <connections>
+                                <action selector="cancelTapped" destination="Zrk-IW-pai" id="1Ta-lH-kWv"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Info" id="v7A-WJ-6j3">
+                            <connections>
+                                <action selector="infoTapped:" destination="Zrk-IW-pai" id="dTg-rd-gC8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="highScoreLabel" destination="4OC-Nu-mBt" id="YhM-ho-rfH"/>
+                        <outlet property="scoreLabel" destination="PnV-Ms-Lne" id="TFi-s6-hgW"/>
+                        <outlet property="wordToGuessLabel" destination="Phe-g0-ye1" id="9hq-Pp-2yY"/>
+                        <outletCollection property="yourGuessButtons" destination="Vvo-lJ-oPO" collectionClass="NSMutableArray" id="Pey-gk-QkU"/>
+                        <outletCollection property="yourGuessButtons" destination="RAX-gD-dVm" collectionClass="NSMutableArray" id="TTi-ua-cdG"/>
+                        <outletCollection property="yourGuessButtons" destination="UkS-by-oLU" collectionClass="NSMutableArray" id="TJo-j0-msO"/>
+                        <outletCollection property="yourGuessButtons" destination="mbp-QR-Swg" collectionClass="NSMutableArray" id="NoO-GK-jAk"/>
+                        <outletCollection property="yourGuessButtons" destination="Py4-37-L9F" collectionClass="NSMutableArray" id="DmB-2S-d6D"/>
+                        <outletCollection property="yourGuessButtons" destination="RKW-uz-Tb7" collectionClass="NSMutableArray" id="KXe-RF-oNn"/>
+                        <outletCollection property="yourGuessButtons" destination="e4B-Gc-z6f" collectionClass="NSMutableArray" id="wWQ-aO-rdi"/>
+                        <outletCollection property="yourGuessButtons" destination="WvK-wg-NXl" collectionClass="NSMutableArray" id="keh-U2-a2p"/>
+                        <segue destination="2AM-RJ-HbR" kind="unwind" identifier="animal" unwindAction="unwindToMenuWithSender:" id="sQ2-86-hRv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xdb-f5-naY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2AM-RJ-HbR" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="366" y="752"/>
+        </scene>
+        <!--Match the Vehicles-->
+        <scene sceneID="hvq-1G-8In">
+            <objects>
+                <viewController id="nkV-AW-ZX0" customClass="GamePageViewController" customModule="WordMatching" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V18-iw-h0D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="eve-I9-nLm">
+                                <rect key="frame" x="10" y="64" width="355" height="553"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URp-x8-rp4">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="55.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v80-f9-GKS">
+                                                <rect key="frame" x="0.0" y="0.0" width="177.5" height="55.5"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjh-JX-FxA">
+                                                <rect key="frame" x="177.5" y="0.0" width="177.5" height="55.5"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="qjh-JX-FxA" firstAttribute="width" secondItem="v80-f9-GKS" secondAttribute="width" id="daS-w3-x7s"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSm-Go-fRP">
+                                        <rect key="frame" x="0.0" y="55.5" width="355" height="199"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="32"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4nx-7H-uP8">
+                                        <rect key="frame" x="0.0" y="254.5" width="355" height="298.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bgE-zX-jkc">
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="144.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWf-bg-8LA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="81.5" height="144.5"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="car" image="car">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="nkV-AW-ZX0" eventType="touchUpInside" id="1EF-QF-XKp"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUA-26-UZf">
+                                                        <rect key="frame" x="91.5" y="0.0" width="81" height="144.5"/>
+                                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="truck" image="truck">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="nkV-AW-ZX0" eventType="touchUpInside" id="MgN-1V-B2T"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUe-FD-tnv">
+                                                        <rect key="frame" x="182.5" y="0.0" width="81.5" height="144.5"/>
+                                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="bus" image="bus">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="nkV-AW-ZX0" eventType="touchUpInside" id="4wV-jr-3Oj"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tI7-3g-bhm">
+                                                        <rect key="frame" x="274" y="0.0" width="81" height="144.5"/>
+                                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="helicopter" image="helicopter">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="nkV-AW-ZX0" eventType="touchUpInside" id="Nqe-TN-coO"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Fqo-Ml-fIa">
+                                                <rect key="frame" x="0.0" y="154.5" width="355" height="144"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNG-7z-6K7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="82" height="144"/>
+                                                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="train" image="train">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="nkV-AW-ZX0" eventType="touchUpInside" id="tbQ-sS-w8h"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDI-iH-dTC">
+                                                        <rect key="frame" x="91" y="0.0" width="82" height="144"/>
+                                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="airplane" image="airplane">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="nkV-AW-ZX0" eventType="touchUpInside" id="6VK-py-LST"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8h-r6-PXn">
+                                                        <rect key="frame" x="182" y="0.0" width="82" height="144"/>
+                                                        <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="motorcycle" image="motorcycle">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="nkV-AW-ZX0" eventType="touchUpInside" id="g6W-Qf-UsH"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6z5-lo-dzj">
+                                                        <rect key="frame" x="273" y="0.0" width="82" height="144"/>
+                                                        <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="boat" image="boat">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="nkV-AW-ZX0" eventType="touchUpInside" id="IcV-vb-X0S"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4nx-7H-uP8" firstAttribute="height" secondItem="fSm-Go-fRP" secondAttribute="height" multiplier="1.5" id="Uud-wV-nzw"/>
+                                    <constraint firstItem="URp-x8-rp4" firstAttribute="height" secondItem="eve-I9-nLm" secondAttribute="height" multiplier="0.1" id="fZ3-IJ-LKV"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eve-I9-nLm" firstAttribute="leading" secondItem="PZG-yc-DKh" secondAttribute="leading" constant="10" id="D6n-xX-wbd"/>
+                            <constraint firstItem="eve-I9-nLm" firstAttribute="top" secondItem="PZG-yc-DKh" secondAttribute="top" id="Gf4-bE-Lvx"/>
+                            <constraint firstItem="PZG-yc-DKh" firstAttribute="trailing" secondItem="eve-I9-nLm" secondAttribute="trailing" constant="10" id="v0x-Ga-LQe"/>
+                            <constraint firstItem="PZG-yc-DKh" firstAttribute="bottom" secondItem="eve-I9-nLm" secondAttribute="bottom" constant="50" id="wxE-Uw-wqy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PZG-yc-DKh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Match the Vehicles" id="BEd-pl-pK7">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Sqn-0n-3qs">
+                            <connections>
+                                <action selector="cancelTapped" destination="nkV-AW-ZX0" id="ZCq-jg-oUX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Info" id="ySP-3R-a0l">
+                            <connections>
+                                <action selector="infoTapped:" destination="nkV-AW-ZX0" id="vWr-IV-VyH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="highScoreLabel" destination="v80-f9-GKS" id="Hrr-xv-0jv"/>
+                        <outlet property="scoreLabel" destination="qjh-JX-FxA" id="LIo-GC-JLG"/>
+                        <outlet property="wordToGuessLabel" destination="fSm-Go-fRP" id="4cf-af-Z6h"/>
+                        <outletCollection property="yourGuessButtons" destination="TWf-bg-8LA" collectionClass="NSMutableArray" id="EA5-5p-RXz"/>
+                        <outletCollection property="yourGuessButtons" destination="rUA-26-UZf" collectionClass="NSMutableArray" id="FWg-GD-93Q"/>
+                        <outletCollection property="yourGuessButtons" destination="xUe-FD-tnv" collectionClass="NSMutableArray" id="mkX-a0-N0K"/>
+                        <outletCollection property="yourGuessButtons" destination="gNG-7z-6K7" collectionClass="NSMutableArray" id="EN1-qV-twg"/>
+                        <outletCollection property="yourGuessButtons" destination="vDI-iH-dTC" collectionClass="NSMutableArray" id="Xuq-W8-8FP"/>
+                        <outletCollection property="yourGuessButtons" destination="D8h-r6-PXn" collectionClass="NSMutableArray" id="aLu-zg-spl"/>
+                        <outletCollection property="yourGuessButtons" destination="tI7-3g-bhm" collectionClass="NSMutableArray" id="s6F-9y-yoE"/>
+                        <outletCollection property="yourGuessButtons" destination="6z5-lo-dzj" collectionClass="NSMutableArray" id="PX6-Vi-R4X"/>
+                        <segue destination="MRA-Oh-Dqb" kind="unwind" identifier="vehicle" unwindAction="unwindToMenuWithSender:" id="ZMM-ln-Hg3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6TQ-k8-iXF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MRA-Oh-Dqb" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-380" y="752"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pQv-Sb-voa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GOo-i7-GQP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZNO-1W-VJ0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ril-dD-kCV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7xW-AI-NOk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="-83"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="airplane" width="640" height="480"/>
+        <image name="animals" width="640" height="400"/>
+        <image name="apples" width="640" height="360"/>
+        <image name="bananas" width="640" height="360"/>
+        <image name="boat" width="640" height="480"/>
+        <image name="bus" width="640" height="427"/>
+        <image name="car" width="640" height="480"/>
+        <image name="elephant" width="640" height="427"/>
+        <image name="fruits" width="640" height="360"/>
+        <image name="giraffe" width="588" height="527"/>
+        <image name="grapes" width="640" height="480"/>
+        <image name="helicopter" width="640" height="427"/>
+        <image name="kangaroo" width="537" height="480"/>
+        <image name="koala" width="580" height="480"/>
+        <image name="lion" width="640" height="426"/>
+        <image name="mangoes" width="640" height="457"/>
+        <image name="motorcycle" width="640" height="360"/>
+        <image name="oranges" width="640" height="427"/>
+        <image name="penguin" width="640" height="360"/>
+        <image name="pineapples" width="640" height="429"/>
+        <image name="sheep" width="640" height="480"/>
+        <image name="strawberries" width="640" height="432"/>
+        <image name="tiger" width="640" height="426"/>
+        <image name="train" width="640" height="427"/>
+        <image name="truck" width="640" height="480"/>
+        <image name="vehicles" width="640" height="360"/>
+        <image name="watermelons" width="640" height="360"/>
+    </resources>
+</document>
